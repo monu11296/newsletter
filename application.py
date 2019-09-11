@@ -23,7 +23,7 @@ def create_app():
         MAIL_USE_SSL=True,
         MAIL_USERNAME='apikey',
         # MAIL_PASSWORD='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'
-        MAIL_PASSWORD='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'
+        MAIL_PASSWORD=os.environ['MAIL_SERVER_API_KEY']
         )
 
     db.init_app(app)
